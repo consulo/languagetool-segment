@@ -7,23 +7,28 @@ Splitting rules are read from SRX file, which is standard format for this task.
 
 ## Requirements
 
-To run the project Java Runtime Environment (JRE) 1.5 is required.
-To build the project from source Java Software Development Kit (JDK) 1.5 and Ant tool are required. 
+Java 17 or newer and Maven are required to build and run this fork.
+The library uses Jakarta XML Binding 4, SLF4J 2, and an explicit JPMS descriptor.
+It depends only on the SLF4J API; the CLI distribution includes the Simple provider.
 Program should run on any operating system supported by Java. 
 The helper startup scripts were written for Unix and Windows.
 
 ## Library
 
-Segment library is available on [Maven central](http://search.maven.org/#search|ga|1|net.loomchild.segment).
+This fork uses Maven coordinates `consulo.internal.net.loomchild:segment:2.0.5.1`
+and JPMS module name `net.loomchild.segment`. The CLI module is `net.loomchild.segment.ui`.
 See [pom.xml](segment/pom.xml) for details.
 
 ## Development
 
-In order to compile the project clone the repository and run Maven in both segment and segment-ui subdirectiories:
+Build both modules and run the tests from the repository root:
 
-    mvn clean install
+    mvn clean verify
 
-This will generate the binary ZIP version in segment-ui/target/.
+This generates the binary ZIP distribution in `segment-ui/target/`.
+Use `mvn install` to also install the artifacts into the local Maven repository.
+The distribution keeps the classpath launcher and its optional `--test` command;
+the test JAR is for classpath use and should not be put on the module path.
 
 ## Running
 

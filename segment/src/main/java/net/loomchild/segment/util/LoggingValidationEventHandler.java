@@ -1,10 +1,10 @@
 package net.loomchild.segment.util;
 
-import javax.xml.bind.ValidationEvent;
-import javax.xml.bind.ValidationEventHandler;
+import jakarta.xml.bind.ValidationEvent;
+import jakarta.xml.bind.ValidationEventHandler;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Handles XML validation errors by writing them to log.
@@ -12,8 +12,8 @@ import org.apache.commons.logging.LogFactory;
  */
 public class LoggingValidationEventHandler implements ValidationEventHandler {
 
-	private static final Log log = LogFactory
-			.getLog(LoggingValidationEventHandler.class);
+	private static final Logger log = LoggerFactory
+			.getLogger(LoggingValidationEventHandler.class);
 
 	public boolean handleEvent(ValidationEvent event) {
 		if ((event.getSeverity() == ValidationEvent.FATAL_ERROR)

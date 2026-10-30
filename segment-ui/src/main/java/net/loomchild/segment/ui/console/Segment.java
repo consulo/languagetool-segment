@@ -42,8 +42,8 @@ import org.apache.commons.cli.HelpFormatter;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
 import org.apache.commons.cli.PosixParser;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.junit.internal.TextListener;
 import org.junit.runner.JUnitCore;
 
@@ -54,7 +54,7 @@ import org.junit.runner.JUnitCore;
  */
 public class Segment {
 
-	private static final Log log = LogFactory.getLog(Segment.class);
+	private static final Logger log = LoggerFactory.getLogger(Segment.class);
 
 	private enum Algorithm {
 		accurate, fast, ultimate, scanner;

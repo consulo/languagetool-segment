@@ -14,8 +14,8 @@ import net.loomchild.segment.srx.SrxDocument;
 import net.loomchild.segment.srx.Rule;
 import net.loomchild.segment.srx.SrxParser;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 /**
@@ -26,7 +26,7 @@ import org.apache.commons.logging.LogFactory;
  */
 public class Srx2StaxParser implements SrxParser {
 
-	private static final Log log = LogFactory.getLog(Srx2StaxParser.class);
+	private static final Logger log = LoggerFactory.getLogger(Srx2StaxParser.class);
 
 	/**
 	 * Parses SRX document from reader.

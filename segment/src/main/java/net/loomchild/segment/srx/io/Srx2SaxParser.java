@@ -21,8 +21,8 @@ import net.loomchild.segment.srx.SrxParser;
 import net.loomchild.segment.util.Util;
 import net.loomchild.segment.util.XmlException;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.xml.sax.Attributes;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
@@ -50,7 +50,7 @@ public class Srx2SaxParser implements SrxParser {
 	
 	
 	@SuppressWarnings("unused")
-	private static final Log log = LogFactory.getLog(Srx2SaxParser.class);
+	private static final Logger log = LoggerFactory.getLogger(Srx2SaxParser.class);
 
 	private static final String SCHEMA = "net/loomchild/segment/res/xml/srx20.xsd";
 	

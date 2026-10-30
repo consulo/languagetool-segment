@@ -96,7 +96,8 @@ public class Buffer implements CharSequence {
 		return stringBuilder.toString();
 	}
 
-	private boolean isEmpty() {
+	@Override
+	public boolean isEmpty() {
 		return length() == 0;
 	}
 

@@ -4,8 +4,8 @@ import static net.loomchild.segment.util.Util.getJarManifest;
 
 import java.util.jar.Manifest;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Retrieves segment version. Singleton.
@@ -13,7 +13,7 @@ import org.apache.commons.logging.LogFactory;
  */
 public class Version {
 	
-    private static final Log log = LogFactory.getLog(Version.class);
+    private static final Logger log = LoggerFactory.getLogger(Version.class);
 	
 	public static final String VERSION_ATTRIBUTE = "Implementation-Version";  
 	public static final String DATE_ATTRIBUTE = "Build-Date";  
